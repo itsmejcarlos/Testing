@@ -10,11 +10,15 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
+# Se define la clase
 class SalesForce:
+
+    #Se inicia el navegador web
     def __init__(self, driver: webdriver):
         self.driver = driver
         self.time_wait = 10
-
+        
+    # Se ingresa la url y se maximiza la pantalla
     def start_url(self, url, time_to_sleep):
         options = webdriver.ChromeOptions()
         options.add_argument("--disable-notifications")
