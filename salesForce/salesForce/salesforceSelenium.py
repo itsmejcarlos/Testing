@@ -1,5 +1,6 @@
 import time
 
+# Librerias para selenium
 from selenium import webdriver
 from selenium.common import TimeoutException
 from selenium.webdriver import Keys
