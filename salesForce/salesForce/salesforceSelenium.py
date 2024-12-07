@@ -277,7 +277,7 @@ class SalesForce:
             print(iframe)
             self.driver.switch_to.frame(iframe)
         except TimeoutException as ex:
-            print("Fallo al cambiar de iframe: xpath " + xpath)
+            print("Fallo no identifico el iframe: xpath " + xpath)
             print(ex.msg)
 
     def change_iframe_by_id(self, id, time_to_sleep):
