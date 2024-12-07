@@ -30,6 +30,7 @@ class SalesForce:
         time.sleep(time_to_sleep)
         return self.driver
 
+    # Espera que identifique el elemento en pantalla
     def text_by_xpath(self, xpath, text, time_to_sleep):
         try:
             element = WebDriverWait(self.driver, self.time_wait).until(
