@@ -291,5 +291,16 @@ class SalesForce:
             print("Fallo al cambiar de iframe: id " + id)
             print(ex.msg)
 
+    def change_iframe_by_id(self, id, time_to_sleep):
+        try:
+            WebDriverWait(self.driver, self.time_wait).until(EC.visibility_of_element_located((By.ID, id)))
+            time.sleep(time_to_sleep)
+            iframe = self.driver.find_element(By.ID, id)
+            print(iframe)
+            self.driver.switch_to.frame(iframe)
+        except TimeoutException as ex:
+            print("Fallo al cambiar de iframe: id " + id)
+            print(ex.msg)
+
     def close_window(self):
         self.driver.close()
